@@ -1,7 +1,7 @@
 {
-    "name": "com.nitou.assetloader",
+    "name": "jp.nitou.assetloader",
     "version": "0.1.0",
-    "displayName": "Asset Loader",
+    "displayName": "Simple Asset Loader",
     "description": "",
     "author": {
         "name": "Nitou",
