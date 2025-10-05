@@ -1,6 +1,6 @@
 {
-    "name": "jp.nitou.assetloader",
-    "version": "0.1.0",
+    "name": "jp.nitou.simple-assetloader",
+    "version": "1.0.0",
     "displayName": "Simple Asset Loader",
     "description": "",
     "author": {
