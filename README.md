@@ -27,14 +27,14 @@ Unityのリソース読み込みの仕組みである `Resources`と`Addressable
 2. 「+」ボタン > Add package from git URL
 3. 以下のURLを入力する
 ```
-https://github.com/nitou-kanazawa/lib-unity-AssetLoader.git
+https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git
 ```
 
 あるいはPackages/manifest.jsonを開き、dependenciesブロックに以下を追記
 ```
 {
     "dependencies": {
-        "jp.nitou.assetloader": "https://github.com/nitou-kanazawa/lib-unity-AssetLoader.git"
+        "jp.nitou.assetloader": "https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git"
     }
 }
 ```
