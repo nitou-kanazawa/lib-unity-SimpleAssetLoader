@@ -121,27 +121,6 @@ public interface IAssetLoader
 - ステータス管理の明確化
 
 
-## API リファレンス
-
-### IAssetLoader
-
-| メソッド | 説明 |
-|---------|------|
-| `Load<T>(string key)` | アセットの同期読み込み |
-| `LoadAsync<T>(string key)` | アセットの非同期読み込み |
-| `Release(AssetLoadHandle handle)` | アセットの解放 |
-
-### AssetLoadHandle
-
-| プロパティ | 説明 |
-|-----------|------|
-| `Result` | 読み込み結果のアセット |
-| `Status` | 読み込み状態 (Success/Failed/None) |
-| `Task` | UniTaskによる非同期処理 |
-| `IsDone` | 読み込み完了フラグ |
-| `PercentComplete` | 読み込み進捗 (0.0-1.0) |
-| `OperationException` | エラー時の例外情報 |
-
 ## 注意事項
 
 - Addressableを使用する場合は、プロジェクトにAddressablesパッケージがインストールされている必要があります
