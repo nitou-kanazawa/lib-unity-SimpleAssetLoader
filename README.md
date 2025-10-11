@@ -101,6 +101,26 @@ while (!handle.IsDone)
 }
 ```
 
+## アーキテクチャ設計
+
+### Strategy パターン
+
+```cs
+public interface IAssetLoader
+{
+    AssetLoadHandle<T> Load<T>(string key) where T : Object;
+    AssetLoadHandle<T> LoadAsync<T>(string key) where T : Object;
+    void Release(AssetLoadHandle handle);
+}
+```
+- ResourcesとAddressablesをIAssetLoaderインターフェースで抽象化
+  
+### Handle パターン
+- AssetLoadHandleによる統一的な操作管理
+- ControlIdによる追跡可能性
+- ステータス管理の明確化
+
+
 ## API リファレンス
 
 ### IAssetLoader
