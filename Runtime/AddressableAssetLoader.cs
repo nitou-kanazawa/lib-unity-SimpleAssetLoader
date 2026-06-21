@@ -9,7 +9,8 @@ using Object = UnityEngine.Object;
 namespace Nitou.AssetLoader
 {
     /// <summary>
-    ///
+    ///     Addressablesを用いたアセット読み込みの実装．
+    ///     同期読み込み（<see cref="Load{T}"/>）はAddressables 1.17.4以降でのみ利用可能．
     /// </summary>
     public sealed class AddressableAssetLoader : IAssetLoader
     {
@@ -71,11 +72,9 @@ namespace Nitou.AssetLoader
         /// <inheritdoc/>
         public void Release(AssetLoadHandle handle)
         {
-            if (!_controlIdToHandles.ContainsKey(handle.ControlId))
+            if (!_controlIdToHandles.Remove(handle.ControlId, out var addressableHandle))
                 throw new InvalidOperationException($"There is no asset that has been requested for release (ControlId: {handle.ControlId}).");
 
-            var addressableHandle = _controlIdToHandles[handle.ControlId];
-            _controlIdToHandles.Remove(handle.ControlId);
             Addressables.Release(addressableHandle);
         }
     }

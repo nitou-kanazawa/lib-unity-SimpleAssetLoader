@@ -7,7 +7,7 @@ namespace Nitou.AssetLoader
         fileName = "AddressableAssetLoader",
         menuName = "Resource Loader/Addressable Asset Loader")
     ]
-    public sealed class AddressableAssetLoaderSO : AssetLoaderSO, IAssetLoader
+    public sealed class AddressableAssetLoaderSO : AssetLoaderSO
     {
         private readonly AddressableAssetLoader _loader = new();
 

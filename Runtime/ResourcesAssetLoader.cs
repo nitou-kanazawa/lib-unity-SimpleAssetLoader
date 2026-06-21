@@ -6,7 +6,7 @@ using Object = UnityEngine.Object;
 namespace Nitou.AssetLoader
 {
     /// <summary>
-    ///
+    ///     <c>Resources</c> を用いたアセット読み込みの実装．
     /// </summary>
     public sealed class ResourcesAssetLoader : IAssetLoader
     {

@@ -2,7 +2,7 @@
     "name": "jp.nitou.simple-assetloader",
     "version": "1.0.0",
     "displayName": "Simple Asset Loader",
-    "description": "",
+    "description": "Resources と Addressables を統一インターフェースで扱うシンプルなアセット読み込みライブラリ．",
     "author": {
         "name": "Nitou",
         "url": "https://github.com/nitou-kanazawa"
