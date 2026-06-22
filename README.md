@@ -2,6 +2,8 @@
 
 [![license](https://img.shields.io/badge/LICENSE-MIT-green.svg)](LICENSE)
 
+<img src="header.png" width=800>
+
 ## 概要
 Unityのリソース読み込みの仕組みである `Resources`と`Addressable` 統一的に扱うシンプルなライブラリ．
 
