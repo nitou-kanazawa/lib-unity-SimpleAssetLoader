@@ -34,7 +34,7 @@ https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git
 ```
 {
     "dependencies": {
-        "jp.nitou.assetloader": "https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git"
+        "jp.nitou.simple-assetloader": "https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git"
     }
 }
 ```

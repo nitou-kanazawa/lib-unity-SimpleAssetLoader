@@ -6,7 +6,7 @@ namespace Nitou.AssetLoader
         fileName = "ResourcesAssetLoader",
         menuName = "Resource Loader/Resources Asset Loader"
     )]
-    public sealed class ResourcesAssetLoaderSO : AssetLoaderSO, IAssetLoader
+    public sealed class ResourcesAssetLoaderSO : AssetLoaderSO
     {
         private readonly ResourcesAssetLoader _loader = new();
 

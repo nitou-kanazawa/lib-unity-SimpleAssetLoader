@@ -12,7 +12,12 @@ namespace Nitou.AssetLoader
 
         public AssetLoadStatus Status { get; protected set; }
 
-        public Exception OperationExeption { get; protected set; }
+        public Exception OperationException { get; protected set; }
+
+        /// <summary>
+        ///     読み込みの進捗（0.0〜1.0）．
+        /// </summary>
+        public float PercentComplete => _percentCompleteFunc?.Invoke() ?? 0f;
 
         public bool IsDone => Status is not AssetLoadStatus.None;
 
@@ -49,7 +54,7 @@ namespace Nitou.AssetLoader
 
         void IAssetLoadHandleSetter<T>.SetOperationException(Exception ex)
         {
-            OperationExeption = ex;
+            OperationException = ex;
         }
 
         void IAssetLoadHandleSetter<T>.SetPercentCompleteFunc(Func<float> percentComplete)

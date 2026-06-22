@@ -3,7 +3,11 @@ using Cysharp.Threading.Tasks;
 
 namespace Nitou.AssetLoader
 {
-    public interface IAssetLoadHandleSetter<T>
+    /// <summary>
+    ///     <see cref="AssetLoadHandle{T}"/> の内部状態を設定するためのインターフェース．
+    ///     ローダー実装からのみ使用される実装詳細のため，アセンブリ外には公開しない．
+    /// </summary>
+    internal interface IAssetLoadHandleSetter<T>
     {
         void SetStatus(AssetLoadStatus status);
 
