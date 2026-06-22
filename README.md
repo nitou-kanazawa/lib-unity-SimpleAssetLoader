@@ -5,11 +5,11 @@
 <img src="header.png" width=800>
 
 ## 概要
-Unityのリソース読み込みの仕組みである `Resources`と`Addressable` 統一的に扱うシンプルなライブラリ．
+Unityのリソース読み込みの仕組みである `Resources`と`Addressables`を統一的に扱うシンプルなライブラリ．
 
 ## 特徴
 
-- **統一インターフェース**: Resources と Addressable の違いを隠蔽し、同じ API で扱えます
+- **統一インターフェース**: Resources と Addressables の違いを隠蔽し、同じ API で扱えます
 - **同期・非同期読み込み**: 両方の読み込み方式をサポート
 - **進捗監視**: 非同期読み込み時の進捗状況を取得可能
 - **エラーハンドリング**: 読み込み失敗時の例外情報を取得可能
@@ -41,6 +41,9 @@ https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git
 }
 ```
 
+> [!important]
+> 本パッケージは [UniTask](https://github.com/Cysharp/UniTask) に依存していますが、UniTaskは自動ではインストールされません。先にUniTaskをプロジェクトへ導入してください（未導入の場合、コンパイルエラーになります）。
+
 ## 使用方法
 
 ### 基本的な使用例
@@ -48,7 +51,7 @@ https://github.com/nitou-kanazawa/lib-unity-SimpleAssetLoader.git
 ```csharp
 using Nitou.AssetLoader;
 
-// Addressableを使用する場合
+// Addressablesを使用する場合
 IAssetLoader loader = new AddressableAssetLoader();
 
 // Resourcesを使用する場合
@@ -125,7 +128,7 @@ public interface IAssetLoader
 
 ## 注意事項
 
-- Addressableを使用する場合は、プロジェクトにAddressablesパッケージがインストールされている必要があります
+- Addressablesを使用する場合は、プロジェクトにAddressablesパッケージがインストールされている必要があります
 - Resourcesを使用する場合は、アセットがResourcesフォルダ内に配置されている必要があります
 - 読み込みしたアセットは必ず`Release`メソッドで解放してください
 - 非同期読み込み時は`await handle.Task`で完了を待つことを推奨します
